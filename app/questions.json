@@ -1,0 +1,527 @@
+[
+  {
+    "id": 1,
+    "level": "Foundational",
+    "question": "What is the difference between == and === operators?",
+    "suggested_answer": "In JavaScript, == and === are comparison operators used to check equality between two values or variables.\n\nThe main difference between the two operators is how they compare values. The == operator compares the values of two variables after performing type conversion if necessary. On the other hand, the === operator compares the values of two variables without performing type conversion."
+  },
+  {
+    "id": 2,
+    "level": "Foundational",
+    "question": "What is the difference between var, let, and const?",
+    "suggested_answer": "var, let, and const are used to declare variables in JavaScript, but they have key differences.\n\n- var: Function-scoped, hoisted to the top, and can be redeclared.\n- let: Block-scoped, not hoisted to the top, and cannot be redeclared.\n- const: Block-scoped, must be initialized, and cannot be reassigned.\n\nUsing let and const is recommended to avoid unexpected behavior caused by var."
+  },
+  {
+    "id": 3,
+    "level": "Foundational",
+    "question": "What is a closure in JavaScript?",
+    "suggested_answer": "A closure is a function that remembers the variables from its outer scope even after the outer function has finished executing. Closures are useful for data encapsulation, maintaining state, and creating private variables."
+  },
+  {
+    "id": 4,
+    "level": "Foundational",
+    "question": "How does the JavaScript event loop work?",
+    "suggested_answer": "The event loop is a mechanism in JavaScript that handles asynchronous operations by continuously checking the call stack and task queue.\n\n1. JavaScript executes synchronous code first (call stack).\n2. Asynchronous tasks (setTimeout, Promises) are added to the task queue or microtask queue.\n3. When the call stack is empty, the event loop picks tasks from the queue and executes them.\n\nMicrotasks (Promises) have higher priority than macrotasks (setTimeout, setInterval)."
+  },
+  {
+    "id": 5,
+    "level": "Foundational",
+    "question": "What is event delegation in JavaScript?",
+    "suggested_answer": "Event delegation is a technique where a single event listener is attached to a parent element instead of multiple child elements.\n\nIt works because of event bubbling, where events propagate from a target element up to its ancestors.\nEvent delegation improves performance and makes dynamic elements easier to manage."
+  },
+  {
+    "id": 6,
+    "level": "Foundational",
+    "question": "What is the difference between function declarations and function expressions?",
+    "suggested_answer": "In JavaScript, functions can be defined using function declarations or function expressions.\n\n- **Function Declaration:** Defined using the `function` keyword and hoisted to the top of the scope.\n  ```js\n  function greet() {\n    return 'Hello!';\n  }\n  ```\n- **Function Expression:** Assigned to a variable and not hoisted.\n  ```js\n  const greet = function() {\n    return 'Hello!';\n  };\n  ```\nFunction expressions can be anonymous or named and are often used in callbacks."
+  },
+  {
+    "id": 7,
+    "level": "Foundational",
+    "question": "What is the difference between synchronous and asynchronous code in JavaScript?",
+    "suggested_answer": "Synchronous code executes line by line, blocking further execution until the current operation completes.\n\nAsynchronous code allows the program to continue execution while waiting for tasks to complete, using mechanisms like callbacks, Promises, and async/await."
+  },
+  {
+    "id": 8,
+    "level": "Foundational",
+    "question": "What are the different data types in JavaScript?",
+    "suggested_answer": "JavaScript has **primitive** and **non-primitive (reference)** data types.\n\n**Primitive types (immutable):**\n- String\n- Number\n- Boolean\n- Undefined\n- Null\n- Symbol\n- BigInt\n\n**Non-primitive types (mutable):**\n- Objects\n- Arrays\n- Functions"
+  },
+  {
+    "id": 9,
+    "level": "Foundational",
+    "question": "What is the difference between null and undefined in JavaScript?",
+    "suggested_answer": "Both `null` and `undefined` represent the absence of a value, but they have key differences:\n\n- **undefined:** A variable is declared but not assigned a value.\n  ```js\n  let x;\n  console.log(x); // undefined\n  ```\n- **null:** A value explicitly set to indicate the absence of any object or value.\n  ```js\n  let y = null;\n  console.log(y); // null\n  ```\nUndefined is assigned automatically, whereas null is assigned intentionally."
+  },
+  {
+    "id": 11,
+    "level": "Foundational",
+    "question": "What is the difference between spread (...) and rest (...) operators in JavaScript?",
+    "suggested_answer": "Both spread and rest operators use the same syntax but serve different purposes. The spread operator expands elements of an iterable like an array or object, while the rest operator gathers multiple elements into an array. The spread operator is commonly used for copying and merging arrays or objects, whereas the rest operator is used in function parameters to handle an indefinite number of arguments."
+  },
+  {
+    "id": 12,
+    "level": "Foundational",
+    "question": "What is the purpose of the JavaScript 'this' keyword?",
+    "suggested_answer": "The 'this' keyword refers to the object that is executing the current function. Its value depends on how the function is called. In the global context, 'this' refers to the global object. In object methods, 'this' refers to the object that owns the method. In arrow functions, 'this' is inherited from the surrounding lexical scope. When using 'this' in event handlers or constructors, its value may vary based on the execution context."
+  },
+  {
+    "id": 13,
+    "level": "Foundational",
+    "question": "What are JavaScript promises and how do they work?",
+    "suggested_answer": "Promises in JavaScript are used to handle asynchronous operations, providing a way to execute code after a task completes. A promise can be in one of three states: pending, fulfilled, or rejected. When the asynchronous operation completes successfully, the promise is resolved and executes the success handler. If it fails, the promise is rejected, triggering the error handler. Promises allow chaining multiple asynchronous actions using 'then', 'catch', and 'finally' methods."
+  },
+  {
+    "id": 14,
+    "level": "Foundational",
+    "question": "What is the difference between map, filter, and reduce in JavaScript?",
+    "suggested_answer": "These are array methods used for transforming and manipulating data. The 'map' method applies a function to each element of an array and returns a new array with the transformed elements. The 'filter' method creates a new array containing only elements that pass a specified condition. The 'reduce' method accumulates all elements of an array into a single value by applying a function iteratively, often used for calculations like summing values."
+  },
+  {
+    "id": 15,
+    "level": "Foundational",
+    "question": "What are arrow functions, and how do they differ from regular functions?",
+    "suggested_answer": "Arrow functions are a concise way to write functions in JavaScript. Unlike regular functions, they do not have their own 'this' binding and instead inherit 'this' from the surrounding lexical scope. Arrow functions cannot be used as constructors and do not have a 'prototype' property. They also provide an implicit return for single-expression functions, eliminating the need for explicit 'return' statements in simple cases."
+  },
+  {
+    "id": 15,
+    "level": "Foundational",
+    "question": "What is the significance of strict mode (\"use strict\") in JavaScript?"
+  },
+  {
+    "id": 16,
+    "level": "Intermediate",
+    "question": "What is the concept of hoisting in JavaScript?"
+  },
+  {
+    "id": 17,
+    "level": "Intermediate",
+    "question": "How does JavaScript handle asynchronous code using callbacks?"
+  },
+  {
+    "id": 18,
+    "level": "Intermediate",
+    "question": "What are Promises and how do they improve asynchronous handling?"
+  },
+  {
+    "id": 19,
+    "level": "Intermediate",
+    "question": "What is async/await and how does it simplify asynchronous operations?"
+  },
+  {
+    "id": 20,
+    "level": "Intermediate",
+    "question": "What is the event loop and how does it manage asynchronous tasks?"
+  },
+  {
+    "id": 21,
+    "level": "Intermediate",
+    "question": "How does error handling work with try/catch blocks?"
+  },
+  {
+    "id": 22,
+    "level": "Intermediate",
+    "question": "What are arrow functions and how do they differ from traditional functions?"
+  },
+  {
+    "id": 23,
+    "level": "Intermediate",
+    "question": "What is the concept of \"this\" in JavaScript?"
+  },
+  {
+    "id": 24,
+    "level": "Intermediate",
+    "question": "How is context determined in various invocation patterns?"
+  },
+  {
+    "id": 25,
+    "level": "Intermediate",
+    "question": "What is a closure and how is it used to encapsulate data?"
+  },
+  {
+    "id": 26,
+    "level": "Intermediate",
+    "question": "How does lexical scoping work in JavaScript?"
+  },
+  {
+    "id": 27,
+    "level": "Intermediate",
+    "question": "What are higher-order functions and how do they work?"
+  },
+  {
+    "id": 28,
+    "level": "Intermediate",
+    "question": "How do you use array methods like map, filter, and reduce?"
+  },
+  {
+    "id": 29,
+    "level": "Intermediate",
+    "question": "What is destructuring and how does it simplify data extraction?"
+  },
+  {
+    "id": 30,
+    "level": "Intermediate",
+    "question": "How do default parameters and rest parameters enhance function signatures?"
+  },
+  {
+    "id": 31,
+    "level": "Intermediate",
+    "question": "What is the spread operator and how does it function with arrays and objects?"
+  },
+  {
+    "id": 32,
+    "level": "Intermediate",
+    "question": "How does object shorthand syntax improve code readability?"
+  },
+  {
+    "id": 33,
+    "level": "Intermediate",
+    "question": "What are modules in JavaScript and how do you import/export them?"
+  },
+  {
+    "id": 34,
+    "level": "Intermediate",
+    "question": "What is the significance of JSON and how is it used in data interchange?"
+  },
+  {
+    "id": 35,
+    "level": "Intermediate",
+    "question": "How does prototypal inheritance work in JavaScript?"
+  },
+  {
+    "id": 36,
+    "level": "Practical Application",
+    "question": "What is event delegation and why is it important for performance?"
+  },
+  {
+    "id": 37,
+    "level": "Practical Application",
+    "question": "How do you manipulate the DOM with vanilla JavaScript?"
+  },
+  {
+    "id": 38,
+    "level": "Practical Application",
+    "question": "What are the best practices for handling user events?"
+  },
+  {
+    "id": 39,
+    "level": "Practical Application",
+    "question": "How do you manage state in a JavaScript application?"
+  },
+  {
+    "id": 40,
+    "level": "Practical Application",
+    "question": "What are web storage APIs and how do localStorage and sessionStorage differ?"
+  },
+  {
+    "id": 41,
+    "level": "Practical Application",
+    "question": "How does JavaScript integrate with AJAX for data fetching?"
+  },
+  {
+    "id": 42,
+    "level": "Practical Application",
+    "question": "What is the Fetch API and how does it compare to XMLHttpRequest?"
+  },
+  {
+    "id": 43,
+    "level": "Practical Application",
+    "question": "How do you parse and stringify JSON data?"
+  },
+  {
+    "id": 44,
+    "level": "Practical Application",
+    "question": "What are service workers and how do they enhance web performance?"
+  },
+  {
+    "id": 45,
+    "level": "Practical Application",
+    "question": "How does Progressive Web App (PWA) development benefit from JavaScript?"
+  },
+  {
+    "id": 46,
+    "level": "Practical Application",
+    "question": "How do you implement debouncing and throttling to optimize event handling?"
+  },
+  {
+    "id": 47,
+    "level": "Practical Application",
+    "question": "What is the concept of immutability and why is it crucial in state management?"
+  },
+  {
+    "id": 48,
+    "level": "Practical Application",
+    "question": "How do you handle cross-browser compatibility issues?"
+  },
+  {
+    "id": 49,
+    "level": "Practical Application",
+    "question": "What is the importance of semantic versioning in JavaScript libraries?"
+  },
+  {
+    "id": 50,
+    "level": "Practical Application",
+    "question": "How do build tools (like Webpack or Rollup) and transpilers (like Babel) enhance modern JavaScript development?"
+  },
+  {
+    "id": 51,
+    "level": "Advanced",
+    "question": "What are IIFEs (Immediately Invoked Function Expressions) and how are they used?"
+  },
+  {
+    "id": 52,
+    "level": "Advanced",
+    "question": "How does the module pattern work in JavaScript?"
+  },
+  {
+    "id": 53,
+    "level": "Advanced",
+    "question": "What is the significance of the Revealing Module Pattern?"
+  },
+  {
+    "id": 54,
+    "level": "Advanced",
+    "question": "How do closures help with data encapsulation and privacy?"
+  },
+  {
+    "id": 55,
+    "level": "Advanced",
+    "question": "What is currying and how can it be applied in functional programming?"
+  },
+  {
+    "id": 56,
+    "level": "Advanced",
+    "question": "How do you implement partial application in JavaScript?"
+  },
+  {
+    "id": 57,
+    "level": "Advanced",
+    "question": "What are pure functions and why are they critical in functional programming?"
+  },
+  {
+    "id": 58,
+    "level": "Advanced",
+    "question": "How do you avoid side effects in JavaScript functions?"
+  },
+  {
+    "id": 59,
+    "level": "Advanced",
+    "question": "What is memoization and how does it improve performance?"
+  },
+  {
+    "id": 60,
+    "level": "Advanced",
+    "question": "How do you manage memory leaks and optimize garbage collection?"
+  },
+  {
+    "id": 61,
+    "level": "Advanced",
+    "question": "What is the role of the prototype chain in JavaScript inheritance?"
+  },
+  {
+    "id": 62,
+    "level": "Advanced",
+    "question": "How does the new keyword facilitate object creation and inheritance?"
+  },
+  {
+    "id": 63,
+    "level": "Advanced",
+    "question": "What are ES6 classes and how do they compare to function constructors?"
+  },
+  {
+    "id": 64,
+    "level": "Advanced",
+    "question": "How do you override methods in class inheritance?"
+  },
+  {
+    "id": 65,
+    "level": "Advanced",
+    "question": "What is the significance of static methods in JavaScript classes?"
+  },
+  {
+    "id": 66,
+    "level": "Advanced",
+    "question": "How does JavaScript handle private properties and methods (using symbols or private fields)?"
+  },
+  {
+    "id": 67,
+    "level": "Advanced",
+    "question": "What are generators and how do they manage iterative processes?"
+  },
+  {
+    "id": 68,
+    "level": "Advanced",
+    "question": "How do iterators work in JavaScript and what is their role in collections?"
+  },
+  {
+    "id": 69,
+    "level": "Advanced",
+    "question": "What is the significance of the Symbol data type in JavaScript?"
+  },
+  {
+    "id": 70,
+    "level": "Advanced",
+    "question": "How do you implement custom iterators and generators?"
+  },
+  {
+    "id": 71,
+    "level": "Expert",
+    "question": "What are the inner workings of the JavaScript event loop, microtasks, and macrotasks?"
+  },
+  {
+    "id": 72,
+    "level": "Expert",
+    "question": "How do Promises and async/await interact with the event loop?"
+  },
+  {
+    "id": 73,
+    "level": "Expert",
+    "question": "What is the impact of JavaScript's single-threaded model on concurrency?"
+  },
+  {
+    "id": 74,
+    "level": "Expert",
+    "question": "How does reactive programming apply in JavaScript (e.g., RxJS)?"
+  },
+  {
+    "id": 75,
+    "level": "Expert",
+    "question": "What are Web Workers and how do they facilitate multi-threading?"
+  },
+  {
+    "id": 76,
+    "level": "Expert",
+    "question": "How does the Service Worker lifecycle work in a PWA context?"
+  },
+  {
+    "id": 77,
+    "level": "Expert",
+    "question": "What is the significance of the Shadow DOM in web component architecture?"
+  },
+  {
+    "id": 78,
+    "level": "Expert",
+    "question": "How do custom elements elevate web development?"
+  },
+  {
+    "id": 79,
+    "level": "Expert",
+    "question": "What is the Virtual DOM and how does it impact performance in libraries like React?"
+  },
+  {
+    "id": 80,
+    "level": "Expert",
+    "question": "How do diffing algorithms work in modern JavaScript frameworks?"
+  },
+  {
+    "id": 81,
+    "level": "Expert",
+    "question": "What are design patterns (e.g., Singleton, Observer, Factory) and how are they implemented in JavaScript?"
+  },
+  {
+    "id": 82,
+    "level": "Expert",
+    "question": "How do you implement a pub/sub pattern for scalable event handling?"
+  },
+  {
+    "id": 83,
+    "level": "Expert",
+    "question": "What are the security best practices in JavaScript (e.g., XSS prevention, CSRF mitigation)?"
+  },
+  {
+    "id": 84,
+    "level": "Expert",
+    "question": "How do Content Security Policy (CSP) and other security measures integrate with JavaScript?"
+  },
+  {
+    "id": 85,
+    "level": "Expert",
+    "question": "How do you perform performance profiling and optimization in JavaScript applications?"
+  },
+  {
+    "id": 86,
+    "level": "Expert",
+    "question": "What are the best practices for unit testing and integration testing in JavaScript?"
+  },
+  {
+    "id": 87,
+    "level": "Expert",
+    "question": "How do testing frameworks (like Jest, Mocha) improve code quality?"
+  },
+  {
+    "id": 88,
+    "level": "Expert",
+    "question": "What are the benefits of static type checkers like TypeScript or Flow in large codebases?"
+  },
+  {
+    "id": 89,
+    "level": "Expert",
+    "question": "How do you architect a scalable JavaScript application for high-performance environments?"
+  },
+  {
+    "id": 90,
+    "level": "Expert",
+    "question": "What is event sourcing and how can it be applied within JavaScript applications?"
+  },
+  {
+    "id": 91,
+    "level": "Innovative Integration",
+    "question": "How do you integrate GraphQL with JavaScript applications for efficient data retrieval?"
+  },
+  {
+    "id": 92,
+    "level": "Innovative Integration",
+    "question": "What are the benefits and challenges of server-side rendering (SSR) in modern JavaScript frameworks?"
+  },
+  {
+    "id": 93,
+    "level": "Innovative Integration",
+    "question": "How does hydration work in isomorphic/universal JavaScript applications?"
+  },
+  {
+    "id": 94,
+    "level": "Innovative Integration",
+    "question": "What are the best practices for integrating third-party APIs in a secure manner?"
+  },
+  {
+    "id": 95,
+    "level": "Innovative Integration",
+    "question": "How does micro-frontend architecture leverage JavaScript for scalable deployments?"
+  },
+  {
+    "id": 96,
+    "level": "Innovative Integration",
+    "question": "How do you implement real-time data communication with WebSockets or libraries like Socket.io?"
+  },
+  {
+    "id": 97,
+    "level": "Innovative Integration",
+    "question": "What is the significance of functional reactive programming (FRP) in complex JavaScript applications?"
+  },
+  {
+    "id": 98,
+    "level": "Innovative Integration",
+    "question": "How do you apply domain-driven design (DDD) principles in JavaScript codebases?"
+  },
+  {
+    "id": 99,
+    "level": "Innovative Integration",
+    "question": "How do you architect for fault tolerance and graceful degradation in JavaScript applications?"
+  },
+  {
+    "id": 100,
+    "level": "Innovative Integration",
+    "question": "What emerging trends in JavaScript (e.g., WebAssembly, AI integration) should professionals be prepared to adopt?"
+  },
+  {
+    "practiceQuestions": [
+      "What is the difference between var, let and const?",
+      "What Is the Difference Between == and === Operators in JavaScript?",
+      "How browser renders a page?",
+      "Tell me about Event loop.",
+      "What is closure?",
+      "How to optimize css animations?",
+      "What is Promises in javascript?"
+    ]
+  }
+]
