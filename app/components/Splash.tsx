@@ -20,27 +20,27 @@ function SplashCursor({
 }) {
   const canvasRef = useRef(null);
 
-  const runSplash = (createSplashcounter: number) => {
-    let autoX = Math.random() * window.innerWidth;
-    let autoY = Math.random() * window.innerHeight;
-    let dx = 15,
-      dy = 15;
-    const duration = Math.random() * 100;
-    const autoInterval = setInterval(() => {
-      if (counter >= duration) {
-        clearInterval(autoInterval);
-        return;
-      }
-      autoX += dx;
-      autoY += dy;
-      counter++;
-      // Bounce off edges
-      if (autoX <= 0 || autoX >= window.innerWidth) dx = -dx;
-      if (autoY <= 0 || autoY >= window.innerHeight) dy = -dy;
+  // const runSplash = (createSplashcounter: number) => {
+  //   let autoX = Math.random() * window.innerWidth;
+  //   let autoY = Math.random() * window.innerHeight;
+  //   let dx = 15,
+  //     dy = 15;
+  //   const duration = Math.random() * 100;
+  //   const autoInterval = setInterval(() => {
+  //     if (counter >= duration) {
+  //       clearInterval(autoInterval);
+  //       return;
+  //     }
+  //     autoX += dx;
+  //     autoY += dy;
+  //     counter++;
+  //     // Bounce off edges
+  //     if (autoX <= 0 || autoX >= window.innerWidth) dx = -dx;
+  //     if (autoY <= 0 || autoY >= window.innerHeight) dy = -dy;
 
-      createSplash(autoX, autoY);
-    }, 10);
-  };
+  //     // createSplash(autoX, autoY);
+  //   }, 10);
+  // };
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -82,14 +82,14 @@ function SplashCursor({
     pointer.color = generateColor(); // Set initial color
     let counterCustom = 0;
     // Function to create a splash at given coordinates
-    function createSplash(clientX, clientY) {
-      let posX = scaleByPixelRatio(clientX);
-      let posY = scaleByPixelRatio(clientY);
-      updatePointerMoveData(pointer, posX, posY, {
-        ...pointer.color,
-        g: pointer.color.g,
-      });
-    }
+    // function createSplash(clientX, clientY) {
+    //   let posX = scaleByPixelRatio(clientX);
+    //   let posY = scaleByPixelRatio(clientY);
+    //   updatePointerMoveData(pointer, posX, posY, {
+    //     ...pointer.color,
+    //     g: pointer.color.g,
+    //   });
+    // }
     // Auto-generate splashes
     let autoX = Math.random() * window.innerWidth;
     let autoY = Math.random() * window.innerHeight;
@@ -109,7 +109,7 @@ function SplashCursor({
       if (autoX <= 0 || autoX >= window.innerWidth) dx = -dx;
       if (autoY <= 0 || autoY >= window.innerHeight) dy = -dy;
 
-      createSplash(autoX, autoY);
+      // createSplash(autoX, autoY);
     }, 10);
 
     // const autoInterval1 = setInterval(() => {
